@@ -1,29 +1,26 @@
 package seguridad.controlador;
 
 public class clsTipoUsuarios {
-    private int usuid;
-    private String usunombre;
-    private String usucontrasena;
-    private String tipousu;
+    private int tipousuid;
+    private String tipousunombre;
+   
 
     public clsTipoUsuarios() {
     }
 
-    public clsTipoUsuarios(int usuid) {
-        this.usuid = usuid;
+    public clsTipoUsuarios(int tipousuid) {
+        this.tipousuid = tipousuid;
     }
     
-    public clsTipoUsuarios(String usunombre, String usucontrasena, String tipousu) {
-        this.usunombre = usunombre;
-        this.usucontrasena = usucontrasena;
-        this.tipousu = tipousu;
+    public clsTipoUsuarios(String tipousunombre) {
+        this.tipousunombre = tipousunombre;
+      
     }
     
-    public clsTipoUsuarios(int usuid, String usunombre, String usucontrasena, String tipousu) {
-        this.usuid = usuid;
-        this.usunombre = usunombre;
-        this.usucontrasena = usucontrasena;
-        this.tipousu = tipousu;
+    public clsTipoUsuarios(int tipousuid, String tipousunombre) {
+        this.tipousuid = tipousuid;
+        this.tipousunombre = tipousunombre;
+       
     }
     
     @Override
@@ -31,36 +28,21 @@ public class clsTipoUsuarios {
         return super.toString(); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public int getUsuid() {
-        return usuid;
+    public int getTipousuid() {
+        return tipousuid;
     }
 
-    public void setUsuid(int usuid) {
-        this.usuid = usuid;
+    public void setTipousuid(int tipousuid) {
+        this.tipousuid = tipousuid;
     }
 
-    public String getUsunombre() {
-        return usunombre;
+    public String getTipousunombre() {
+        return tipousunombre;
     }
 
-    public void setUsunombre(String usunombre) {
-        this.usunombre = usunombre;
+    public void setTipousunombre(String tipousunombre) {
+        this.tipousunombre = tipousunombre;
     }
-
-    public String getUsucontrasena() {
-        return usucontrasena;
-    }
-
-    public void setUsucontrasena(String usucontrasena) {
-        this.usucontrasena = usucontrasena;
-    }
-    
-    public String gettipousu() {
-        return tipousu;
-    }
-
-    public void settipousu(String tipousu) {
-        this.tipousu = tipousu;
-    }
-
 }
+
+   
