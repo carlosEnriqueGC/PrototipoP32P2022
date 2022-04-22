@@ -4,28 +4,26 @@ public class clsUsuario {
     private int usuid;
     private String usunombre;
     private String usucontrasena;
-    private String usuultimasesion;
-    private String usuestatus;
-    private String usunombrereal;
-    private String usucorreoe;
-    private String usutelefono;
-    private String usudireccion;
+    private String tipousu;
+
     public clsUsuario() {
     }
 
-    public clsUsuario(int p_usuid) {
-        this.usuid = p_usuid;
+    public clsUsuario(int usuid) {
+        this.usuid = usuid;
     }
     
-    public clsUsuario(String p_usunombre, String p_usucontrasena) {
-        this.usunombre = p_usunombre;
-        this.usucontrasena = p_usucontrasena;
+    public clsUsuario(String usunombre, String usucontrasena, String tipousu) {
+        this.usunombre = usunombre;
+        this.usucontrasena = usucontrasena;
+        this.tipousu = tipousu;
     }
     
-    public clsUsuario(int p_usuid, String p_usunombre, String p_usucontrasena) {
-        this.usuid = p_usuid;
-        this.usunombre = p_usunombre;
-        this.usucontrasena = p_usucontrasena;
+    public clsUsuario(int usuid, String usunombre, String usucontrasena, String tipousu) {
+        this.usuid = usuid;
+        this.usunombre = usunombre;
+        this.usucontrasena = usucontrasena;
+        this.tipousu = tipousu;
     }
     
     @Override
@@ -56,52 +54,13 @@ public class clsUsuario {
     public void setUsucontrasena(String usucontrasena) {
         this.usucontrasena = usucontrasena;
     }
-
-    public String getUsuultimasesion() {
-        return usuultimasesion;
+    
+    public String gettipousu() {
+        return tipousu;
     }
 
-    public void setUsuultimasesion(String usuultimasesion) {
-        this.usuultimasesion = usuultimasesion;
+    public void settipousu(String tipousu) {
+        this.tipousu = tipousu;
     }
 
-    public String getUsuestatus() {
-        return usuestatus;
-    }
-
-    public void setUsuestatus(String usuestatus) {
-        this.usuestatus = usuestatus;
-    }
-
-    public String getUsunombrereal() {
-        return usunombrereal;
-    }
-
-    public void setUsunombrereal(String usunombrereal) {
-        this.usunombrereal = usunombrereal;
-    }
-
-    public String getUsucorreoe() {
-        return usucorreoe;
-    }
-
-    public void setUsucorreoe(String usucorreoe) {
-        this.usucorreoe = usucorreoe;
-    }
-
-    public String getUsutelefono() {
-        return usutelefono;
-    }
-
-    public void setUsutelefono(String usutelefono) {
-        this.usutelefono = usutelefono;
-    }
-
-    public String getUsudireccion() {
-        return usudireccion;
-    }
-
-    public void setUsudireccion(String usudireccion) {
-        this.usudireccion = usudireccion;
-    }
 }
