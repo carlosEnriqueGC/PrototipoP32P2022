@@ -9,11 +9,11 @@ package seguridad.vista;
 
 import seguridad.controlador.clsUsuario;
 import java.awt.HeadlessException;
-
+import seguridad.vista.mdiGeneral;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
-import seguridad.controlador.clsUsuarioConectado;
+import seguridad.controlador.clsUsuario;
 import seguridad.modelo.daoUsuario;
 
 
@@ -55,7 +55,7 @@ public class frmLogin extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setText("Seguridad del Sistema");
+        jLabel1.setText("Sistema polideportivo (prototipo)");
 
         jLabel2.setText("Usuario");
 
@@ -82,7 +82,7 @@ public class frmLogin extends javax.swing.JFrame {
             }
         });
 
-        cbxAreas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione:", "Area Seguridad", "Area Logistica", "Area Compras", "Area Ventas", "Area RRHH", "Prototipo" }));
+        cbxAreas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione:", "Area Deportes", "Area Seguridad" }));
         cbxAreas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbxAreasActionPerformed(evt);
@@ -96,12 +96,9 @@ public class frmLogin extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel3)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -116,8 +113,11 @@ public class frmLogin extends javax.swing.JFrame {
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(btnAceptar)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButton2))))))
-                .addContainerGap(76, Short.MAX_VALUE))
+                                    .addComponent(jButton2)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addComponent(jLabel1)))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -169,7 +169,7 @@ public class frmLogin extends javax.swing.JFrame {
                     //mdiGeneral menuGeneral = new mdiGeneral();
                     //menuGeneral.setVisible(true);
                     //this.dispose();
-                    clsUsuarioConectado usuarioRegistrado = new clsUsuarioConectado();                                   usuarioRegistrado.setUsunombre(txtUsuario.getText().trim());
+                    clsUsuario usuarioRegistrado = new clsUsuario();                                   usuarioRegistrado.setUsunombre(txtUsuario.getText().trim());
                     
                     //---Agregado para considerar todos los módulos
                     String areaSeleccionada;

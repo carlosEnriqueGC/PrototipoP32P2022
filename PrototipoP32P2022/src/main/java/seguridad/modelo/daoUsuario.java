@@ -16,12 +16,12 @@ import java.util.List;
  */
 public class daoUsuario {
 
-    private static final String SQL_SELECT = "SELECT usuid, usunombre, usucontrasena, usuultimasesion, usuestatus, usunombrereal, usucorreoe, usutelefono, usudireccion FROM tbl_usuario";
-    private static final String SQL_INSERT = "INSERT INTO tbl_usuario(usunombre, usucontrasena, usuultimasesion, usuestatus, usunombrereal, usucorreoe, usutelefono, usudireccion) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
-    private static final String SQL_UPDATE = "UPDATE tbl_usuario SET usunombre=?, usucontrasena=?, usuultimasesion=?, usuestatus=?, usunombrereal=?, usucorreoe=?, usutelefono=?, usudireccion=? WHERE usuid = ?";
-    private static final String SQL_DELETE = "DELETE FROM tbl_usuario WHERE usuid=?";
-    private static final String SQL_QUERY = "SELECT usuid, usunombre, usucontrasena, usuultimasesion, usuestatus, usunombrereal, usucorreoe, usutelefono, usudireccion FROM tbl_usuario WHERE usuid=?";
-    private static final String SQL_QUERYN = "SELECT usuid, usunombre, usucontrasena, usuultimasesion, usuestatus, usunombrereal, usucorreoe, usutelefono, usudireccion FROM tbl_usuario WHERE usunombre=?";    
+    private static final String SQL_SELECT = "SELECT usuid, usunombre, usucontrasena, Tipousu FROM tbl_usuarios";
+    private static final String SQL_INSERT = "INSERT INTO tbl_usuarios(usunombre, usucontrasena, Tipousu) VALUES(?, ?, ?)";
+    private static final String SQL_UPDATE = "UPDATE tbl_usuario SET usunombre=?, usucontrasena=?, Tipousu=? WHERE usuid = ?";
+    private static final String SQL_DELETE = "DELETE FROM tbl_usuarios WHERE usuid=?";
+    private static final String SQL_QUERY = "SELECT usuid, usunombre, usucontrasena, Tipousu FROM tbl_usuarios WHERE usuid=?";
+    private static final String SQL_QUERYN = "SELECT usuid, usunombre, usucontrasena, Tipousu FROM tbl_usuarios WHERE usunombre=?";    
 
     public List<clsUsuario> select() {
         Connection conn = null;
@@ -37,23 +37,13 @@ public class daoUsuario {
                 int id = rs.getInt("usuid");
                 String nombre = rs.getString("usunombre");
                 String contrasena = rs.getString("usucontrasena");
-                String ultimasesion = rs.getString("usuultimasesion");
-                String estatus = rs.getString("usuestatus");
-                String nombrereal = rs.getString("usunombrereal");
-                String correoe = rs.getString("usucorreoe");
-                String telefono = rs.getString("usutelefono");
-                String direccion = rs.getString("usudireccion");
+                String tipousu = rs.getString("Tipousu");
 
                 usuario = new clsUsuario();
                 usuario.setUsuid(id);
                 usuario.setUsunombre(nombre);
                 usuario.setUsucontrasena(contrasena);
-                usuario.setUsuultimasesion(ultimasesion);
-                usuario.setUsuestatus(estatus);
-                usuario.setUsunombrereal(nombrereal);
-                usuario.setUsucorreoe(correoe);
-                usuario.setUsutelefono(telefono);
-                usuario.setUsudireccion(direccion);
+                usuario.settipousu(tipousu);
                 usuarios.add(usuario);
             }
 
@@ -77,12 +67,7 @@ public class daoUsuario {
             stmt = conn.prepareStatement(SQL_INSERT);
             stmt.setString(1, usuario.getUsunombre());
             stmt.setString(2, usuario.getUsucontrasena());
-            stmt.setString(3, usuario.getUsuultimasesion());
-            stmt.setString(4, usuario.getUsuestatus());
-            stmt.setString(5, usuario.getUsunombrereal());            
-            stmt.setString(6, usuario.getUsucorreoe());
-            stmt.setString(7, usuario.getUsutelefono());            
-            stmt.setString(8, usuario.getUsudireccion());            
+            stmt.setString(3, usuario.gettipousu());            
 
             System.out.println("ejecutando query:" + SQL_INSERT);
             rows = stmt.executeUpdate();
@@ -107,12 +92,7 @@ public class daoUsuario {
             stmt = conn.prepareStatement(SQL_UPDATE);
             stmt.setString(1, usuario.getUsunombre());
             stmt.setString(2, usuario.getUsucontrasena());
-            stmt.setString(3, usuario.getUsuultimasesion());
-            stmt.setString(4, usuario.getUsuestatus());
-            stmt.setString(5, usuario.getUsunombrereal());            
-            stmt.setString(6, usuario.getUsucorreoe());
-            stmt.setString(7, usuario.getUsutelefono());            
-            stmt.setString(8, usuario.getUsudireccion());            
+            stmt.setString(3, usuario.gettipousu());           
             stmt.setInt(9, usuario.getUsuid());
 
             rows = stmt.executeUpdate();
@@ -165,23 +145,14 @@ public class daoUsuario {
                 int id = rs.getInt("usuid");
                 String nombre = rs.getString("usunombre");
                 String contrasena = rs.getString("usucontrasena");
-                String ultimasesion = rs.getString("usuultimasesion");
-                String estatus = rs.getString("usuestatus");
-                String nombrereal = rs.getString("usunombrereal");
-                String correoe = rs.getString("usucorreoe");
-                String telefono = rs.getString("usutelefono");
-                String direccion = rs.getString("usudireccion");
-
+                String tipousu = rs.getString("Tipousu");
+              
                 usuario = new clsUsuario();
                 usuario.setUsuid(id);
                 usuario.setUsunombre(nombre);
                 usuario.setUsucontrasena(contrasena);
-                usuario.setUsuultimasesion(ultimasesion);
-                usuario.setUsuestatus(estatus);
-                usuario.setUsunombrereal(nombrereal);
-                usuario.setUsucorreoe(correoe);
-                usuario.setUsutelefono(telefono);
-                usuario.setUsudireccion(direccion);
+                usuario.settipousu(tipousu);
+                
             }
             //System.out.println("Registros buscado:" + persona);
         } catch (SQLException ex) {
@@ -209,23 +180,14 @@ public clsUsuario queryn(clsUsuario usuario) {
                 int id = rs.getInt("usuid");
                 String nombre = rs.getString("usunombre");
                 String contrasena = rs.getString("usucontrasena");
-                String ultimasesion = rs.getString("usuultimasesion");
-                String estatus = rs.getString("usuestatus");
-                String nombrereal = rs.getString("usunombrereal");
-                String correoe = rs.getString("usucorreoe");
-                String telefono = rs.getString("usutelefono");
-                String direccion = rs.getString("usudireccion");
-
+                String tipousu = rs.getString("tipousu");
+         
                 usuario = new clsUsuario();
                 usuario.setUsuid(id);
                 usuario.setUsunombre(nombre);
                 usuario.setUsucontrasena(contrasena);
-                usuario.setUsuultimasesion(ultimasesion);
-                usuario.setUsuestatus(estatus);
-                usuario.setUsunombrereal(nombrereal);
-                usuario.setUsucorreoe(correoe);
-                usuario.setUsutelefono(telefono);
-                usuario.setUsudireccion(direccion);
+                usuario.settipousu(tipousu);
+               
             }
             //System.out.println("Registros buscado:" + persona);
         } catch (SQLException ex) {
