@@ -56,7 +56,7 @@ public class frmMantenimientoUsuarios extends javax.swing.JInternalFrame {
         usuarioAConsultar = usuarioDAO.query(usuarioAConsultar);
         txtNombre.setText(usuarioAConsultar.getUsunombre());
         txtContrasena.setText(usuarioAConsultar.getUsucontrasena());
-        
+       
     }
 
     public frmMantenimientoUsuarios() {
