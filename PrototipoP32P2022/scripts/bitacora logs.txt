@@ -1,0 +1,62 @@
+
+commit b366574ea34a2a4d669ce3675029818839c1f1a0 (HEAD -> main, origin/main)
+Merge: 440c6d9 8689f0f
+Author: carlosEnriqueGC <98114171+carlosEnriqueGC@users.noreply.github.com>
+Date:   Fri Apr 22 17:56:45 2022 -0600
+
+    Merge pull request #2 from carlosEnriqueGC/ramaMantenimientos94912013013
+
+    Rama mantenimientos94912013013 este tiene fallos literal no se la solucion nunca me habia pasado
+
+commit 8689f0f34e766c001de6bd7405d8068a7fb4cfb1
+Author: carlos enrique guzman cabrera <cguzmanc10@miumg.edu.gt>
+Date:   Fri Apr 22 17:55:33 2022 -0600
+
+    se congelo netbeans esto fue lo que se logro hacer
+
+commit 4ce1f4a102a8a1ede29c2c2599b991ad1ed23e94
+Author: carlos enrique guzman cabrera <cguzmanc10@miumg.edu.gt>
+Date:   Fri Apr 22 17:12:08 2022 -0600
+
+    mantenimientos usuarios y tipo funcionando
+
+commit dc238e638d8f4353cf0d99417d243b78f25c6bc2 (HEAD -> ramalogin94912013013, origin/ramalogin94912013013)
+Author: carlos enrique guzman cabrera <cguzmanc10@miumg.edu.gt>
+Date:   Fri Apr 22 15:39:20 2022 -0600
+
+    login funcionando
+
+commit 4c1ed90348031f04ca955b98e7a7da5bc35e127a (ramalogin91942013013)
+Author: carlos enrique guzman cabrera <cguzmanc10@miumg.edu.gt>
+Date:   Fri Apr 22 14:40:07 2022 -0600
+
+    se creo script
+
+commit a7f07dd7fcbcf37b300bb86c1e70e191ed26e86d
+Author: carlos enrique guzman cabrera <cguzmanc10@miumg.edu.gt>
+Date:   Fri Apr 22 13:07:43 2022 -0600
+
+    plantilla lista para modifcaciones
+commit ae1a1b4b9dec79afd9969beb424a21c5284c478d (HEAD -> ramaMantenimientos94912013013, origin/ramaMantenimientos94912013013)
+Author: carlos enrique guzman cabrera <cguzmanc10@miumg.edu.gt>
+Date:   Fri Apr 22 18:08:57 2022 -0600
+
+    no funciono como se esperaba
+
+commit 8689f0f34e766c001de6bd7405d8068a7fb4cfb1
+Author: carlos enrique guzman cabrera <cguzmanc10@miumg.edu.gt>
+Date:   Fri Apr 22 17:55:33 2022 -0600
+
+    se congelo netbeans esto fue lo que se logro hacer
+
+commit 4ce1f4a102a8a1ede29c2c2599b991ad1ed23e94
+Author: carlos enrique guzman cabrera <cguzmanc10@miumg.edu.gt>
+Date:   Fri Apr 22 17:12:08 2022 -0600
+
+    mantenimientos usuarios y tipo funcionando
+
+commit 7a353d817e74ddb378edf97a7ebc0ad958455609
+Author: carlos enrique guzman cabrera <cguzmanc10@miumg.edu.gt>
+Date:   Fri Apr 22 16:23:32 2022 -0600
+
+
